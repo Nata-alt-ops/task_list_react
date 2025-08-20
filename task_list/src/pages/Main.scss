@@ -1,0 +1,95 @@
+@use '@fontsource/inter';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@mixin flex_con{
+    display: flex;
+    align-items: center;
+}
+@mixin title_list{
+    font-family: 'Inter';
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.site_con{
+    width: 100%;
+    height: auto;
+    background-color:lightblue;
+
+    .list_con{
+        @include flex_con();
+        background-color: darkorange;
+        width: 100%;
+
+        .list{
+            background-color: brown;
+            width: 500px;
+            height: auto;
+            margin-top: 200px;
+            margin-left: 200px;
+
+            .list_title{
+                @include title_list();
+                margin-left: 50px;
+                margin-top: 30px;
+
+                 &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 680px;
+                    left: 250px;
+                    width: 400px;
+                    height: 1px;
+                    background-color: #E0E0E0;
+                    z-index: 1;
+                    margin-right: 16px;
+                }
+            }
+            .list_task{
+                @include flex_con();
+                gap: 190px;
+                margin-top: 50px;
+                width: 500px;
+                height: auto;
+                background-color: darkcyan;
+
+                .task_text{
+                    
+                    margin-top: 50px;
+                    margin-left: 50px;
+                    margin-bottom: 50px;
+                    font-family:"Inter";
+
+                }
+
+                .actions_icons{
+                    @include flex_con();
+                    gap:20px;
+
+                    .change_task{
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+
+                        &:hover{
+                            color: #ff4747 ;
+                        }
+                    }
+                    .delete_task{
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                    }
+
+
+                }
+
+
+        }
+    }
+}
+
+}

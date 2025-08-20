@@ -21,12 +21,97 @@ export const Main = () =>{
                     <h1 className="list_title">Список дел</h1>
                     {problems.map(problem =>(
                         <div key={problem.id}>
-                            <div className="list_task">{problem.task}</div>
+                            <div className="list_task">
+                                <div className="task_text">{problem.task}</div>
+                                <div className="actions_icons">
+                                  
+                                    <img src="/pen.svg" alt={problem.task} className="change_task" />
+                                    <img src="/delete (1).png" alt={problem.task} className="delete_task" />
+                                </div>
+                            </div>
                         </div>
                     ))}
 
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
 
     );
