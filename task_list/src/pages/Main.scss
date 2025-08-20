@@ -50,7 +50,7 @@
             }
             .list_task{
                 @include flex_con();
-                gap: 190px;
+                gap: 239px;
                 margin-top: 50px;
                 width: 500px;
                 height: auto;
@@ -58,10 +58,11 @@
 
                 .task_text{
                     
-                    margin-top: 50px;
+                    margin-top: 30px;
                     margin-left: 50px;
-                    margin-bottom: 50px;
+                    margin-bottom: 30px;
                     font-family:"Inter";
+                    font-size: 15px;
 
                 }
 
@@ -70,25 +71,61 @@
                     gap:20px;
 
                     .change_task{
-                        width: 25px;
-                        height: 25px;
+                        width: 18px;
+                        height: 18px;
                         cursor: pointer;
 
-                        &:hover{
-                            color: #ff4747 ;
-                        }
+
                     }
                     .delete_task{
-                        width: 25px;
-                        height: 25px;
+                        width: 18px;
+                        height: 18px;
                         cursor: pointer;
-                    }
+                    }}}}
 
+    .new_task{
+        @include flex_con();
+        align-items: flex-start;
+        background-color: blueviolet;
+        flex-direction: column;
+        margin-top: 50px;
 
-                }
-
+        h1{
+            margin-left: 50px;
+            font-size: 25px;
+            margin-bottom: 0px;
+            font-weight: 500;
 
         }
+        .input_button{
+            @include flex_con();
+
+            input{
+                margin-left: 50px;
+                width: 333px;
+                height: 30px;
+                margin-bottom: 50px;
+
+                &:active{
+                    border: none !important;
+                }
+            }
+            button{
+                width: 90px;
+                height: 34px;
+                margin-bottom: 50px;
+                border: none;
+
+                &:hover{
+                    background-color: #E0E0E0;
+                    color: aquamarine;
+                    border: none;
+                }
+            }
+        }
+
+
+
     }
 }
 
