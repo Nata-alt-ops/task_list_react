@@ -53,7 +53,7 @@ export const Main = () =>{
 
         setProblem(prev =>
             prev.map(task =>
-                task.id == editTaskId ? {...task, task:editTask.trim()}: task
+                task.id === editTaskId ? {...task, task:editTask.trim()}: task
             )
         );
         setEditTaskId(null)
@@ -74,7 +74,7 @@ export const Main = () =>{
                     <h1 className="list_title">Список дел</h1>
                      {problems.map(problem => (
                         <div key={problem.id} className="list_task">
-                        <div className={`task_text ${problem.completed ? 'completed' : ''}`} onClick={() => toggleComplete(problem.id)}
+                        <div className={`task_text ${problem.completed && editTaskId !== problem.id ? 'completed' : ''}`} onClick={() => toggleComplete(problem.id)}
                             style={{ cursor: 'pointer' }}>
                             {editTaskId === problem.id ? (
                             <div className="edit-input-group">
