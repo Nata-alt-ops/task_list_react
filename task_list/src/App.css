@@ -14,7 +14,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image:
+    linear-gradient(250deg,
+      #5242e2 10%,
+      #2ebdd6 50%,
+      #38ec7d 100%
+    );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
