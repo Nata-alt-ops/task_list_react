@@ -1,0 +1,21 @@
+"Команды установки шрифтов, зависимостей и т.д"
+
+"Установка yarn"
+npm install yarn
+
+"Установка файла с type script"
+yarn create react-app task_list --template typescript
+
+"Переход в эту папку"
+cd название папки
+
+"снова установить yarn"
+yarn install
+
+"Запуск"
+yarn run start
+
+"Установка шрифта Inter"
+yarn add @fontsource/inter@latest
+
+
