@@ -11,16 +11,17 @@ $color_main4:#fc8383;
 $color_main5:#ffffff;
 $color_main6:#d35959;
 $color_main7:#dd7e7e;
-$color_main7:#001233;
-$color_main8:#001845;
-$color_main9:#002855;
-$color_main10:#33415C;
-$color_main11:#d6d6fc;
-$color_main12:#2a2a3a;
-$color_main13:#aaaac4;
-$color_main14:#555555;
-$color_main15:#000000;
-$color_main16:#ac4a4a;
+$color_main8:#001233;
+$color_main9:#001845;
+$color_main10:#002855;
+$color_main11:#33415C;
+$color_main12:#d6d6fc;
+$color_main13:#2a2a3a;
+$color_main14:#aaaac4;
+$color_main15:#555555;
+$color_main16:#000000;
+$color_main17:#ac4a4a;
+$color_main18:#e27575;
 
 @mixin flex_con{
     display: flex;
@@ -101,7 +102,7 @@ body{
                     margin-top: 30px;
                     position: relative;
                     margin-bottom: 30px;
-                    color: #ffffff;  
+                    color: $color_main5;  
                 }
                 .light_dark{
                     @include flex_con();
@@ -168,7 +169,7 @@ body{
                 @include flex_con();
                 margin-left: 30px;
                 gap:10px;
-                background-color: #e27575;
+                background-color: $color_main18;
                 width: 440px;
                 height: 25px;
                 border-radius: 100px;
@@ -218,7 +219,7 @@ body{
 
                     &.completed {
                         text-decoration: line-through;
-                        color: $color_main16;
+                        color: $color_main17;
                         }
                 }
                     .actions_icons{
@@ -242,7 +243,7 @@ body{
                             cursor: pointer;
 
                             &:hover{
-                                color: #ffffff;
+                                color: $color_main5;
                             }
 
 
@@ -258,8 +259,8 @@ body{
         input{
             width: 150px;
             height: 20px;
-            border:1px solid #FB6969;
-            background-color: #ffffff;
+            border:1px solid $color_main3;
+            background-color: $color_main5;
             border-radius: 0px;
 
         }
@@ -268,13 +269,13 @@ body{
             height: 22px;
             border: none;
             cursor: pointer;
-            background-color:#dd7e7e;
+            background-color:$color_main7;
             
 
             &:hover{
-                border: 1px solid #ffffff;
-                background-color:#FB6969;
-                color: #ffffff;
+                border: 1px solid $color_main5;
+                background-color:$color_main3;
+                color: $color_main5;
             }
         }
     }
@@ -285,19 +286,19 @@ body{
 body.dark_theme {
   background-image: linear-gradient(
     to right,
-    #001233 0%,
-    #001845 50%,
-    #002855 100%
+    color_main8 0%,
+    $color_main9 50%,
+    color_main10 100%
   );
 
   .list_con .list {
-    background-color: #33415C;
+    background-color: $color_main11;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 
     .list_title,
     .new_task h1,
     .task_text {
-      color: #d6d6fc;
+      color: $color_main12;
     }
 
      .filters{
@@ -312,13 +313,13 @@ body.dark_theme {
             height: 25px;
             font-family: 'Inter';
             font-size: 15px;
-            background-color: #2a2a3a;
-            color:#d6d6fc;
+            background-color: $color_main13;
+            color:$color_main12;
             cursor: pointer;
 
             &:hover, &.active{
-                background-color: #ffffff;
-                color:#2a2a3a;
+                background-color: $color_main5;
+                color:$color_main13;
             }
 
             
@@ -327,40 +328,40 @@ body.dark_theme {
     }
 
     .list_task {
-      background-color: #2a2a3a;
+      background-color: $color_main13;
 
       .task_text{
-        color:#d6d6fc;
+        color:$color_main12;
       }
 
       .task_text.completed {
-        color: #aaaac4;
+        color: $color_main14;
       }
     }
 
     .actions_icons .change_task,
     .actions_icons .delete_task {
-      color: #d6d6fc;
+      color: $color_main12;
 
     }
 
     .new_task{
-       background-color:#33415C;
+       background-color:$color_main11;
        
        
        .input_button input {
-         background-color: #2a2a3a;
-         color: white;
-         border: 1px solid #555;
+         background-color: $color_main13;
+         color: $color_main5;
+         border: 1px solid $color_main15;
        }
        .input_button button {
-         background-color: #33415C;
-         color: white;
+         background-color: $color_main11;
+         color: $color_main5;
    
          &:hover {
-           background-color: #ffffff;
-           color: #33415C;
-           border: 1px solid #555;
+           background-color: $color_main5;
+           color: $color_main11;
+           border: 1px solid $color_main15;
          }
        }
     }
