@@ -17,7 +17,7 @@ export const Main = () =>{
             },
             {id:2,
              task:"Почесать кота",
-             completed: true
+             completed: false
             }
         ]
     )
@@ -147,7 +147,7 @@ export const Main = () =>{
                         onClick={() => setFilter('active')}>Активные ({problems.filter(t => !t.completed).length})</button>
                          <button className={`filter ${filter === 'completed' ? 'active': ''}`}
 
-                        onClick={() => setFilter('completed')}>Выполненые ({problems.filter(t => t.completed).length})</button>
+                        onClick={() => setFilter('completed')}>Завершенные ({problems.filter(t => t.completed).length})</button>
                     </div>
                     {TaskFilter.length === 0 ? (
                         <div className="no-task">
@@ -162,7 +162,7 @@ export const Main = () =>{
                         onDrop={(e) => { e.preventDefault(); handleDrop(e, problem.id);
                         }}
                         style={{ opacity: draggedItem === problem.id ? 0.5 : 1}}>
-
+                        <div className="drag_text_task">
                         <div className="drag-handle"
                             draggable="true"
                             onDragStart={() => handleDragStart(problem.id)}
@@ -190,6 +190,7 @@ export const Main = () =>{
                                         saveTask();}}}/>
                                 <button onClick={(e) => {e.stopPropagation(); saveTask();}}>Изменить</button>
                             </div>) : ( problem.task )}
+                        </div>
                         </div>
                         <div className="actions_icons">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" 
