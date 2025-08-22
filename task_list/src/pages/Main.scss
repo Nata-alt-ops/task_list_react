@@ -49,13 +49,18 @@ $color_main18:#e27575;
 }
 
 @mixin list{
-    width: 500px;
+    /*width: 500px;*/
+    width: 90%;
+    max-width: 500px;
+    min-width: 300px;
     height: auto;
     margin-top: 100px;
-    margin-left: 650px;
+    /*margin-left: 650px;*/
+    margin: 100px auto;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     overflow: hidden; 
     border-radius: 12px;
+    box-sizing: border-box;
 }
 
 @mixin margin_list_task{
@@ -398,4 +403,83 @@ body.dark_theme {
             }
         }
     }
+}
+
+@media (max-width: 600px) {
+  .list {
+    margin: 20px 10px;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .title_light_dark {
+    @include flex_con();
+    gap: auto;
+    margin-left: 15px;
+
+    .list_title {
+      margin: 0;
+      font-size: 18px;
+    }
+     .light_dark {
+        @include flex_con();
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+        gap: auto;
+        flex-wrap: nowrap;
+
+        svg {
+            border-radius: 5px;
+            background-color: $color_main4;
+            width: 50px;
+            height: 30px;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.05);
+                background-color: $color_main5;
+            }
+        }
+    }
+  }
+
+
+  .new_task .input_button {
+    flex-direction: column;
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+    }
+  }
+
+  .filters {
+    width: calc(100% - 60px);
+    margin: 10px 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .list_task {
+    padding: 10px;
+    margin: 5px 30px;
+    gap: 10px;
+  }
+
+  .task_text {
+    font-size: 16px;
+  }
+
+  .actions_icons {
+    gap: 15px;
+  }
+
+  .drag-handle svg {
+    width: 18px;
+    height: 18px;
+  }
 }
