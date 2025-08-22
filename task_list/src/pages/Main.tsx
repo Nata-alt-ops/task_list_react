@@ -149,8 +149,13 @@ export const Main = () =>{
 
                         onClick={() => setFilter('completed')}>Выполненые ({problems.filter(t => t.completed).length})</button>
                     </div>
-
-                     {TaskFilter.map(problem => (
+                    {TaskFilter.length === 0 ? (
+                        <div className="no-task">
+                            {filter === 'all' && 'Нет задач'}
+                            {filter === 'active' && 'Нет активных задач'}
+                            {filter === 'completed' && 'Нет выполненных задач'}
+                        </div>):(
+                     TaskFilter.map(problem => (
                         <div key={problem.id} className="list_task" onDragOver={(e) => {
                             e.preventDefault();
                         }}
@@ -198,7 +203,7 @@ export const Main = () =>{
                             </svg>
                         </div>
                         </div>
-                    ))}
+                    )))}
                 </div>
             </div>
         </div>

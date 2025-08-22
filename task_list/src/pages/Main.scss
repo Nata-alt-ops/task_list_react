@@ -3,6 +3,7 @@
 @import '@fontsource/inter/500.css';
 @import '@fontsource/inter/600.css';
 @import '@fontsource/inter/700.css';
+
 $color_main:#78B5D4;
 $color_main1:#CFD8DB;
 $color_main2:#f38393;
@@ -55,8 +56,8 @@ $color_main18:#e27575;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     overflow: hidden; 
     border-radius: 12px;
-
 }
+
 @mixin margin_list_task{
     margin-top: 5px;
     margin-bottom: 0px;
@@ -67,36 +68,32 @@ $color_main18:#e27575;
 }
 
 
-
-body{
-    background-image:
-    linear-gradient(to right,
+body {
+    background-image: linear-gradient(to right,
       $color_main 0%,
       $color_main1 50%,
-      $color_main2 100%,
-    );
+      $color_main2 100%);
     background-attachment: fixed;
-
 }
 
-.site_con{
+.site_con {
     width: 100%;
     height: auto;
 
-    .list_con{
+    .list_con {
         width: 100%;
         height: auto;
 
-        .list{
+        .list {
             @include list();
             background-color: $color_main3;
 
-            .title_light_dark{
+            .title_light_dark {
                 @include flex_con();
-                gap:220px;
+                gap: 220px;
                 height: 100px;
                 
-                .list_title{
+                .list_title {
                     @include title_list();
                     margin-left: 30px;
                     margin-top: 30px;
@@ -104,14 +101,15 @@ body{
                     margin-bottom: 30px;
                     color: $color_main5;  
                 }
-                .light_dark{
+                
+                .light_dark {
                     @include flex_con();
                     margin-top: 30px;
                     margin-left: 30px;
                     margin-bottom: 30px;
-                    gap:5px;
+                    gap: 5px;
     
-                    svg{
+                    svg {
                         border-radius: 5px;
                         background-color: $color_main4;
                         width: 50px;
@@ -119,45 +117,47 @@ body{
                         cursor: pointer;
     
                         &:hover {
-                        transform: scale(1.05);
-                        background-color: $color_main5;
+                            transform: scale(1.05);
+                            background-color: $color_main5;
                         }
                     }
                 }
             }
-            .new_task{
+            
+            .new_task {
                 @include flex_con();
                 align-items: flex-start;
                 background-color: $color_main3;
                 flex-direction: column;
         
-                .input_button{
+                .input_button {
                     @include flex_con();
-                    gap:5px;
+                    gap: 5px;
 
-                    input{
-                        border-radius: 5px 0px 0px 5px ;
+                    input {
+                        border-radius: 5px 0px 0px 5px;
                         border: none;
                         margin-left: 30px;
                         width: 382px;
                         height: 30px;
                         margin-bottom: 20px;
                         
-                        &:active{
+                        &:active {
                             border: none !important;
                         }
                     }
-                    button{
-                        border-radius: 0px 5px 5px 0px ;
+                    
+                    button {
+                        border-radius: 0px 5px 5px 0px;
                         width: 50px;
                         height: 34px;
                         margin-bottom: 20px;
                         border: 1px solid $color_main5;
-                        background-color:$color_main3;
-                        color:$color_main5;
+                        background-color: $color_main3;
+                        color: $color_main5;
                         cursor: pointer;
         
-                        &:hover{
+                        &:hover {
                             background-color: $color_main5;
                             color: $color_main3;
                             border: 1px solid $color_main6;
@@ -165,35 +165,35 @@ body{
                     }
                 }
             }
-            .filters{
+            
+            .filters {
                 @include flex_con();
                 margin-left: 30px;
-                gap:10px;
+                gap: 10px;
                 background-color: $color_main18;
                 width: 440px;
                 height: 25px;
                 border-radius: 100px;
 
-                button{
+                button {
                     @include filters_button_text();
-                    border:none;
+                    border: none;
                     width: 140px;
                     height: 25px;
                     background: none;
-                    color:$color_main5;
+                    color: $color_main5;
                     cursor: pointer;
                     border-radius: 100px;
                     transition: color 0.2s ease, text-decoration 0.2s ease;
                     
-
-                    &:hover, &.active{
+                    &:hover, &.active {
                         background-color: #ffffff;
-                        color:$color_main4;
+                        color: $color_main4;
                     }
                 }
             }
 
-            .list_task{
+            .list_task {
                 @include flex_con();
                 @include margin_list_task();
                 justify-content: space-between;
@@ -203,13 +203,13 @@ body{
                 gap: 20px;
                 margin-bottom: 5px;
 
-                .drag-handle{
+                .drag-handle {
                     margin-left: 20px;
                 }
 
-                .task_text{
+                .task_text {
                     @include task_text();
-                    flex:1;
+                    flex: 1;
                     color: $color_main5;
                     word-wrap: break-word;
                     word-break: break-word;
@@ -220,180 +220,182 @@ body{
                     &.completed {
                         text-decoration: line-through;
                         color: $color_main17;
-                        }
+                    }
                 }
-                    .actions_icons{
-                        @include flex_con();
-                        gap:20px;
-                        margin-right: 20px;
+                
+                .actions_icons {
+                    @include flex_con();
+                    gap: 20px;
+                    margin-right: 20px;
 
-                        .change_task{
-                            width: 20px;
-                            height: 20px;
-                            cursor: pointer;
+                    .change_task {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
 
-                            &:hover{
-                                color: $color_main5;
-                            }
-
+                        &:hover {
+                            color: $color_main5;
                         }
-                        .delete_task{
-                            width: 20px;
-                            height: 20px;
-                            cursor: pointer;
+                    }
+                    
+                    .delete_task {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
 
-                            &:hover{
-                                color: $color_main5;
-                            }
-
-
+                        &:hover {
+                            color: $color_main5;
                         }
-                    }}
-
+                    }
                 }
+            }
 
-
-    .edit-input-group{
-        @include flex_con();
-
-        input{
-            width: 150px;
-            height: 20px;
-            border:1px solid $color_main3;
-            background-color: $color_main5;
-            border-radius: 0px;
-
-        }
-        button{
-            width: 100px;
-            height: 22px;
-            border: none;
-            cursor: pointer;
-            background-color:$color_main7;
-            
-
-            &:hover{
-                border: 1px solid $color_main5;
-                background-color:$color_main3;
-                color: $color_main5;
+            .no-task{
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                color: $color_main17;
             }
         }
-    }
-}
 
-}
-// === Тёмная тема ===
-body.dark_theme {
-  background-image: linear-gradient(
-    to right,
-    color_main8 0%,
-    $color_main9 50%,
-    color_main10 100%
-  );
+        .edit-input-group {
+            @include flex_con();
 
-  .list_con .list {
-    background-color: $color_main11;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-
-    .list_title,
-    .new_task h1,
-    .task_text {
-      color: $color_main12;
-    }
-
-     .filters{
-        @include flex_con();
-        margin-left: 30px;
-        gap:10px;
-
-        button{
-            border:none;
-            text-align: center;
-            width: 140px;
-            height: 25px;
-            font-family: 'Inter';
-            font-size: 15px;
-            background-color: $color_main13;
-            color:$color_main12;
-            cursor: pointer;
-
-            &:hover, &.active{
+            input {
+                width: 150px;
+                height: 20px;
+                border: 1px solid $color_main3;
                 background-color: $color_main5;
-                color:$color_main13;
+                border-radius: 0px;
             }
-
             
-
+            button {
+                width: 100px;
+                height: 22px;
+                border: none;
+                cursor: pointer;
+                background-color: $color_main7;
+                
+                &:hover {
+                    border: 1px solid $color_main5;
+                    background-color: $color_main3;
+                    color: $color_main5;
+                }
+            }
         }
     }
+}
 
-    .list_task {
-      background-color: $color_main13;
+/* Темная тема*/
+body.dark_theme {
+    background-image: linear-gradient(to right,
+      $color_main8 0%,
+      $color_main9 50%,
+      $color_main10 100%);
+    background-attachment: fixed;
 
-      .task_text{
-        color:$color_main12;
-      }
+    .site_con .list_con .list {
+        background-color: $color_main11;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 
-      .task_text.completed {
-        color: $color_main14;
-      }
-    }
+        .title_light_dark .list_title {
+            color: $color_main12;
+        }
 
-    .actions_icons .change_task,
-    .actions_icons .delete_task {
-      color: $color_main12;
-
-    }
-
-    .new_task{
-       background-color:$color_main11;
-       
-       
-       .input_button input {
-         background-color: $color_main13;
-         color: $color_main5;
-         border: 1px solid $color_main15;
-       }
-       .input_button button {
-         background-color: $color_main11;
-         color: $color_main5;
-   
-         &:hover {
-           background-color: $color_main5;
-           color: $color_main11;
-           border: 1px solid $color_main15;
-         }
-       }
-    }
-
-
-    .edit-input-group{
-        input {
-            background-color: #2a2a3a;
-            color: white;
-            border: 1px solid #555;
-            }
-
-        button{
-            background-color: #2a2a3a;
-            color: white;
-            border: 1px solid #555;
-            height:24px;
+        .light_dark svg {
+            background-color: $color_main13;
 
             &:hover {
-              background-color: #ffffff;
-              color: #2a2a3a;
+                background-color: $color_main5;
             }
         }
 
-    }
+        .filters {
+            background-color: $color_main13;
 
-    .light_dark svg {
-      background-color: #d6d6fc;
+            button {
+                background-color: $color_main13;
+                color: $color_main12;
 
-      .sun, .moon {
-        fill: #000000;
-      }
+                &:hover, &.active {
+                    background-color: $color_main5;
+                    color: $color_main13;
+                }
+            }
+        }
+
+        .list_task {
+            background-color: $color_main13;
+
+            .task_text {
+                color: $color_main12;
+
+                &.completed {
+                    color: $color_main14;
+                }
+            }
+
+            .drag-handle {
+                    margin-left: 20px;
+                    color: $color_main12;
+                }
+
+            }
+            .no-task{
+            color: $color_main5;
+        }
+
+        .new_task {
+            background-color: $color_main11;
+
+            .input_button {
+                input {
+                    background-color: $color_main13;
+                    color: $color_main5;
+                    border: 1px solid $color_main15;
+                }
+                
+                button {
+                    background-color: $color_main11;
+                    color: $color_main5;
+
+                    &:hover {
+                        background-color: $color_main5;
+                        color: $color_main11;
+                        border: 1px solid $color_main15;
+                    }
+                }
+            }
+        }
+
+        .edit-input-group {
+            input {
+                background-color: $color_main13;
+                color: white;
+                border: 1px solid $color_main15;
+            }
+            
+            button {
+                background-color: $color_main13;
+                color: white;
+                border: 1px solid $color_main15;
+
+                &:hover {
+                    background-color: #ffffff;
+                    color: #2a2a3a;
+                }
+            }
+        }
+
+        .actions_icons {
+            .change_task,
+            .delete_task {
+                color: $color_main12;
+
+                &:hover {
+                    color: $color_main5;
+                }
+            }
+        }
     }
-  }
 }
