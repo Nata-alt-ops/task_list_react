@@ -42,7 +42,8 @@ $color_main18:#e27575;
 
 @mixin task_text{
     font-family: 'Inter';
-    font-size: 15px;
+    /*font-size: 15px;*/
+    font-size:clamp(10px, 4vw, 15px);
     font-weight: 500;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -195,6 +196,7 @@ body {
                 height: 25px;
                 border-radius: 100px;
                 box-sizing: border-box;
+                margin-bottom: 10px;
 
                 
 
@@ -236,6 +238,7 @@ body {
                 margin-bottom: 5px;
                 padding-left: 30px;
                 padding-right: 30px;
+                position: relative; 
 
                 .drag_text_task{
                     display: flex;
@@ -243,13 +246,20 @@ body {
                     gap: 0px;
                     flex:1;
                     min-width: 0;
+
+
                 }
 
                 .drag-handle {
                    color: #555555;
-                   margin-top: 0px;
-                   align-self: flex-start;
+                   top: 28px;
+                   left: 10px;
                    flex-shrink: 0;
+                   position: absolute;
+
+                   &:active {
+                    cursor: grabbing;
+                    }
                 }
 
                 .task_text {
@@ -389,7 +399,7 @@ body.dark_theme {
             }
 
             .drag-handle {
-                    margin-left: 20px;
+                    left: 10px;
                     color: $color_main12;
                 }
 
